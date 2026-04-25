@@ -1,0 +1,20 @@
+ package dao;
+ import java.sql.SQLException;
+ import java.sql.Connection;
+ import java.sql.DriverManager;
+
+/**
+ *
+ * @author unifjmaiorano
+ */
+public class Conexao {
+    public Connection getConnection() throws SQLException{
+        Connection conexao= DriverManager.getConnection(
+                "jdbc:postgresql://localhost:5433/alunos",
+                "postgres",
+                "fei");
+        return conexao;
+    
+    }
+    
+}
